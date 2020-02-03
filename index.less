@@ -1,0 +1,414 @@
+//variables//
+@mobile: ~"(max-width:500px)";
+@tablet: ~"(max-width: 800px)";
+@smallTablet: ~"(max-width: 640px)";
+@smallDesk: ~"(max-width: 1000px)";
+@mainPurple: #6c46a2;
+@subPurple: #cab2eb33;
+@boldFont: "Patua One";
+@textFont: "Questrial";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media @smallTablet {
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+}
+
+nav {
+  z-index: 9999;
+  height: 10vh;
+  background: @mainPurple;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  img {
+    height: 9vh;
+    margin-left: 20%;
+    padding-top: 1.5%;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: auto;
+    @media @smallTablet {
+      position: fixed;
+      background: @mainPurple;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      clip-path: circle(100px at 90% -10%);
+      -webkit-clip-path: circle(100px at 90% -10%);
+      transition: all 1s ease-out;
+      pointer-events: none;
+    }
+    .sign-up {
+      background-color: white;
+      cursor: pointer;
+      padding: 0.7rem 1.2rem;
+      border-radius: 50px;
+      &:hover {
+        background-color: plum;
+      }
+      a {
+        color: @mainPurple;
+      }
+    }
+
+    li a {
+      color: white;
+      text-decoration: none;
+      font-family: "Patua One";
+      &:hover {
+        color: plum;
+      }
+    }
+  }
+}
+
+nav ul.nav-links.open {
+  clip-path: circle(1000px at 90% -10%);
+  -webkit-clip-path: circle(1000px at 90% -10%);
+  pointer-events: all;
+}
+/*hero banner*/
+
+.banner {
+  @media @smallDesk {
+    height: 120vh;
+  }
+  margin-top: 10vh;
+  height: 60vh;
+  .banner-text {
+    font-family: "fredoka one";
+    background-color: rgba(255, 255, 255, 0.767);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      width: 100%;
+      font-size: 2rem;
+      padding: 5rem;
+      letter-spacing: 2px;
+      color: @mainPurple;
+    }
+    h3 {
+      color: @mainPurple;
+      letter-spacing: 1px;
+    }
+  }
+  .banner-con {
+    display: flex;
+    background-image: url("/img/jungle.svg");
+    @media @smallDesk {
+      flex-direction: column;
+    }
+
+    justify-content: space-around;
+    align-items: center;
+    .banner-image {
+      width: 40%;
+      height: 80vh;
+      @media @smallDesk {
+        height: 70vh;
+        width: 50%;
+        text-align: center;
+      }
+      @media @smallTablet {
+        width: 80%;
+      }
+      .img {
+        @media @smallDesk {
+          max-height: 90%;
+        }
+        @media @smallTablet {
+          max-width: 100%;
+          max-height: 90%;
+        }
+        content: url(/img/omgomg.png);
+        margin-top: 5vh;
+        animation-name: animate;
+        animation-direction: alternate-reverse;
+        animation-duration: 20s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+      }
+    }
+    .banner-text {
+      width: 40%;
+      @media @smallDesk {
+        margin-top: 5vh;
+        width: 90%;
+      }
+    }
+  }
+}
+
+#about {
+  margin-top: 25vh;
+  margin-bottom: 8vh;
+  display: flex;
+  justify-content: center;
+  .about-text {
+    background-color: @subPurple;
+    width: 80%;
+    padding: 4%;
+    text-align: center;
+    h2 {
+      padding: 4%;
+      color: @mainPurple;
+      font-family: @boldFont;
+    }
+    p {
+      text-align: justify;
+      text-indent: 3rem;
+      font-family: @textFont;
+      line-height: 1.5rem;
+    }
+  }
+}
+.divider-img {
+  background-image: url(/img/forest.jpg);
+  height: 70%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.divider-img2 {
+  background-image: url(/img/background2.jpg);
+  height: 70%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.instruction {
+  margin-top: 8vh;
+  margin-bottom: 10vh;
+  h2 {
+    font-family: @boldFont;
+    color: @mainPurple;
+    text-align: center;
+    padding: 3%;
+  }
+  h3 {
+    font-family: @boldFont;
+    text-align: center;
+    padding: 5%;
+  }
+  p {
+    font-family: @textFont;
+    padding-top: 5%;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    @media @smallTablet {
+      flex-direction: column;
+      align-items: center;
+    }
+    div {
+      @media @smallTablet {
+        width: 70%;
+        margin-bottom: 2rem;
+      }
+      text-align: center;
+      width: 25%;
+      padding: 5%;
+
+      background-color: @subPurple;
+      i {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+.testimonial-section {
+  margin-top: 15vh;
+  background: #cab2ebbe;
+  padding: 40px 0;
+  h1 {
+    font-family: @boldFont;
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+  }
+}
+.inner-width {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+.border {
+  width: 100px;
+  height: 3px;
+  background: #333;
+  margin: 40px auto;
+}
+.testimonial {
+  z-index: 9;
+  background: white;
+  padding: 40px;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 20px;
+  }
+}
+.test-info {
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+.test-pic {
+  width: 50px !important;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.test-name {
+  font-size: 12px;
+  color: #333;
+  span {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #3498db;
+  }
+}
+
+footer {
+  h2 {
+    font-family: @boldFont;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+  margin-top: 10vh;
+  padding: 3% 0;
+  text-align: center;
+  .nav2 {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+  i {
+    margin-top: 10vh;
+    font-size: 2rem;
+    color: @mainPurple;
+    padding-right: 2rem;
+    &:hover {
+      color: plum;
+    }
+  }
+  p {
+    font-family: @textFont;
+    font-size: 1rem;
+    margin-top: 10vh;
+    text-align: center;
+    color: @mainPurple;
+  }
+}
+.form-div {
+  display: flex;
+  justify-content: center;
+  form {
+    width: 80%;
+  }
+  input,
+  label,
+  textarea {
+    width: 100%;
+    margin: 4% 0;
+    font-family: @textFont;
+    font-size: 1.7 rem;
+  }
+  input[type="text"] {
+    font-size: 20px;
+    height: 2rem;
+  }
+  input,
+  textarea {
+    border: none;
+    background-color: @subPurple;
+  }
+  textarea {
+    height: 9rem;
+  }
+  textarea[type="text"] {
+    font-size: 22px;
+  }
+}
+
+button {
+  cursor: pointer;
+  width: 30%;
+  background-color: @mainPurple;
+  border-radius: 50px;
+  font-family: @textFont;
+  font-size: 1.4rem;
+  color: white;
+
+  padding: 2% 0;
+
+  margin-bottom: 3%;
+  &:hover {
+    background-color: plum;
+  }
+}
+
+//animation keyframes//
+@keyframes animate {
+  0% {
+    content: url(/img/parrot.png);
+  }
+  20% {
+    content: url(/img/boar.png);
+  }
+  40% {
+    content: url(/img/gorilla.png);
+  }
+  60% {
+    content: url(/img/baboon.png);
+  }
+  80% {
+    content: url(/img/hammerhead.png);
+  }
+  100% {
+    content: url(/img/omgomg.png);
+  }
+}
