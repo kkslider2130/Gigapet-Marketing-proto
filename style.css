@@ -130,7 +130,7 @@ nav ul.nav-links.open {
 
 .banner .banner-con {
   display: flex;
-  background-image: url("/img/jungle.svg");
+  background-image: url("../img/jungle.svg");
   justify-content: space-around;
   align-items: center;
 }
@@ -161,7 +161,7 @@ nav ul.nav-links.open {
 }
 
 .banner .banner-con .banner-image .img {
-  content: url(/img/omgomg.png);
+  content: url(../img/omgomg.png);
   margin-top: 5vh;
   animation-name: animate;
   animation-direction: alternate-reverse;
@@ -224,7 +224,7 @@ nav ul.nav-links.open {
 }
 
 .divider-img {
-  background-image: url(/img/forest.jpg);
+  background-image: url(../img/forest.jpg);
   height: 70%;
   background-attachment: fixed;
   background-position: center;
@@ -233,7 +233,7 @@ nav ul.nav-links.open {
 }
 
 .divider-img2 {
-  background-image: url(/img/background2.jpg);
+  background-image: url(../img/background2.jpg);
   height: 70%;
   background-attachment: fixed;
   background-position: center;
@@ -292,6 +292,55 @@ nav ul.nav-links.open {
 
 .instruction .container div i {
   font-size: 3.5rem;
+}
+
+.graph-section {
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .graph-section {
+    flex-direction: column;
+  }
+}
+
+.graph-section .graph-img {
+  width: 60%;
+}
+
+@media (max-width: 800px) {
+  .graph-section .graph-img {
+    width: 100%;
+  }
+}
+
+.graph-section .graph-img img {
+  max-width: 100%;
+}
+
+.graph-section .graph-text {
+  width: 30%;
+  background-color: #cab2eb33;
+  padding: 2rem;
+}
+
+@media (max-width: 800px) {
+  .graph-section .graph-text {
+    margin-top: 10vh;
+    width: 80%;
+  }
+}
+
+.graph-section .graph-text h2 {
+  font-family: "Patua One";
+  color: #6c46a2;
+}
+
+.graph-section .graph-text p {
+  font-family: "Questrial";
+  margin-top: 2rem;
 }
 
 .testimonial-section {
@@ -456,26 +505,26 @@ button:hover {
 
 @keyframes animate {
   0% {
-    content: url(/img/parrot.png);
+    content: url(../img/parrot.png);
   }
 
   20% {
-    content: url(/img/boar.png);
+    content: url(../img/boar.png);
   }
 
   40% {
-    content: url(/img/gorilla.png);
+    content: url(../img/gorilla.png);
   }
 
   60% {
-    content: url(/img/baboon.png);
+    content: url(../img/baboon.png);
   }
 
   80% {
-    content: url(/img/hammerhead.png);
+    content: url(../img/hammerhead.png);
   }
 
   100% {
-    content: url(/img/omgomg.png);
+    content: url(../img/omgomg.png);
   }
 }
