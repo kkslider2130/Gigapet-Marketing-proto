@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -658,5 +659,546 @@ button:hover {
 
   100% {
     content: url(../img/omgomg.png);
+  }
+}
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+}
+
+nav {
+  z-index: 9999;
+  height: 10vh;
+  background: #6c46a2;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+nav img {
+  height: 9vh;
+  margin-left: 20%;
+  padding-top: 1.5%;
+}
+
+nav .nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: auto;
+}
+
+@media (max-width: 640px) {
+  nav .nav-links {
+    position: fixed;
+    background: #6c46a2;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+}
+
+nav .nav-links .sign-up {
+  background-color: white;
+  cursor: pointer;
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+}
+
+nav .nav-links .sign-up:hover {
+  background-color: plum;
+}
+
+nav .nav-links .sign-up a {
+  color: #6c46a2;
+}
+
+nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Patua One";
+}
+
+nav .nav-links li a:hover {
+  color: plum;
+}
+
+nav ul.nav-links.open {
+  clip-path: circle(1000px at 90% -10%);
+  -webkit-clip-path: circle(1000px at 90% -10%);
+  pointer-events: all;
+}
+
+/*hero banner*/
+.banner {
+  margin-top: 10vh;
+  height: 60vh;
+}
+
+@media (max-width: 1000px) {
+  .banner {
+    height: 120vh;
+  }
+}
+
+.banner .banner-text {
+  font-family: "fredoka one";
+  background-color: rgba(255, 255, 255, 0.767);
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner .banner-text h1 {
+  width: 100%;
+  font-size: 2rem;
+  padding: 5rem;
+  letter-spacing: 2px;
+  color: #6c46a2;
+}
+
+.banner .banner-text h3 {
+  color: #6c46a2;
+  letter-spacing: 1px;
+}
+
+.banner .banner-con {
+  display: flex;
+
+  background-image: url("./img/jungle.svg");
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .banner .banner-con {
+    flex-direction: column;
+  }
+}
+
+.banner .banner-con .banner-image {
+  width: 40%;
+  height: 80vh;
+}
+
+@media (max-width: 1000px) {
+  .banner .banner-con .banner-image {
+    height: 70vh;
+    width: 50%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .banner .banner-con .banner-image {
+    width: 80%;
+  }
+}
+
+.banner .banner-con .banner-image .img {
+
+  content: url(./img/omgomg.png);
+
+  margin-top: 5vh;
+  animation-name: animate;
+  animation-direction: alternate-reverse;
+  animation-duration: 20s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+}
+
+@media (max-width: 1000px) {
+  .banner .banner-con .banner-image .img {
+    max-height: 90%;
+  }
+}
+
+@media (max-width: 640px) {
+  .banner .banner-con .banner-image .img {
+    max-width: 100%;
+    max-height: 90%;
+  }
+}
+
+.banner .banner-con .banner-text {
+  width: 40%;
+}
+
+@media (max-width: 1000px) {
+  .banner .banner-con .banner-text {
+    margin-top: 5vh;
+    width: 90%;
+  }
+}
+
+#about {
+  margin-top: 25vh;
+  margin-bottom: 8vh;
+  display: flex;
+  justify-content: center;
+}
+
+#about .about-text {
+  background-color: #cab2eb33;
+  width: 80%;
+  padding: 4%;
+  text-align: center;
+}
+
+#about .about-text h2 {
+  padding: 4%;
+  color: #6c46a2;
+  font-family: "Patua One";
+}
+
+#about .about-text p {
+  text-align: justify;
+  text-indent: 3rem;
+  font-family: "Questrial";
+  line-height: 1.5rem;
+}
+
+.divider-img {
+
+  background-image: url(./img/forest.jpg);
+
+  height: 70%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.divider-img2 {
+
+  background-image: url(./img/background2.jpg);
+
+  height: 70%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.instruction {
+  margin-top: 8vh;
+  margin-bottom: 10vh;
+}
+
+.instruction h2 {
+  font-family: "Patua One";
+  color: #6c46a2;
+  text-align: center;
+  padding: 3%;
+}
+
+.instruction h3 {
+  font-family: "Patua One";
+  text-align: center;
+  padding: 5%;
+}
+
+.instruction p {
+  font-family: "Questrial";
+  padding-top: 5%;
+}
+
+.instruction .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 640px) {
+  .instruction .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.instruction .container div {
+  text-align: center;
+  width: 25%;
+  padding: 5%;
+  background-color: #cab2eb33;
+}
+
+@media (max-width: 640px) {
+  .instruction .container div {
+    width: 70%;
+    margin-bottom: 2rem;
+  }
+}
+
+.instruction .container div i {
+  font-size: 3.5rem;
+}
+
+.graph-section {
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .graph-section {
+    flex-direction: column;
+  }
+}
+
+.graph-section .graph-img {
+  width: 60%;
+}
+
+@media (max-width: 800px) {
+  .graph-section .graph-img {
+    width: 100%;
+  }
+}
+
+.graph-section .graph-img img {
+  max-width: 100%;
+}
+
+.graph-section .graph-text {
+  width: 30%;
+  background-color: #cab2eb33;
+  padding: 2rem;
+}
+
+@media (max-width: 800px) {
+  .graph-section .graph-text {
+    margin-top: 10vh;
+    width: 80%;
+  }
+}
+
+.graph-section .graph-text h2 {
+  font-family: "Patua One";
+  color: #6c46a2;
+}
+
+.graph-section .graph-text p {
+  font-family: "Questrial";
+  margin-top: 2rem;
+}
+
+.testimonial-section {
+  margin-top: 15vh;
+  background: #cab2ebbe;
+  padding: 40px 0;
+}
+
+.testimonial-section h1 {
+  font-family: "Patua One";
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+}
+
+.inner-width {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.border {
+  width: 100px;
+  height: 3px;
+  background: #333;
+  margin: 40px auto;
+}
+
+.testimonial {
+  z-index: 9;
+  background: white;
+  padding: 40px;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.testimonial p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 20px;
+}
+
+.test-info {
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+
+.test-pic {
+  width: 50px !important;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.test-name {
+  font-size: 12px;
+  color: #333;
+}
+
+.test-name span {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3498db;
+}
+
+footer {
+  margin-top: 10vh;
+  padding: 3% 0;
+  text-align: center;
+}
+
+footer h2 {
+  font-family: "Patua One";
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+footer .nav2 {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer .center {
+  display: flex;
+  justify-content: center;
+}
+
+footer i {
+  margin-top: 10vh;
+  font-size: 2rem;
+  color: #6c46a2;
+  padding-right: 2rem;
+}
+
+footer i:hover {
+  color: plum;
+}
+
+footer p {
+  font-family: "Questrial";
+  font-size: 1rem;
+  margin-top: 10vh;
+  text-align: center;
+  color: #6c46a2;
+}
+
+.form-div {
+  display: flex;
+  justify-content: center;
+}
+
+.form-div form {
+  width: 80%;
+}
+
+.form-div input,
+.form-div label,
+.form-div textarea {
+  width: 100%;
+  margin: 4% 0;
+  font-family: "Questrial";
+  font-size: 1.7 rem;
+}
+
+.form-div input[type="text"] {
+  font-size: 20px;
+  height: 2rem;
+}
+
+.form-div input,
+.form-div textarea {
+  border: none;
+  background-color: #cab2eb33;
+}
+
+.form-div textarea {
+  height: 9rem;
+}
+
+.form-div textarea[type="text"] {
+  font-size: 22px;
+}
+
+button {
+  cursor: pointer;
+  width: 30%;
+  background-color: #6c46a2;
+  border-radius: 50px;
+  font-family: "Questrial";
+  font-size: 1.4rem;
+  color: white;
+  padding: 2% 0;
+  margin-bottom: 3%;
+}
+
+button:hover {
+  background-color: plum;
+}
+
+@keyframes animate {
+  0% {
+
+    content: url(./img/parrot.png);
+  }
+
+  20% {
+    content: url(./img/boar.png);
+  }
+
+  40% {
+    content: url(./img/gorilla.png);
+  }
+
+  60% {
+    content: url(./img/baboon.png);
+  }
+
+  80% {
+    content: url(./img/hammerhead.png);
+  }
+
+  100% {
+    content: url(./img/omgomg.png);
+
   }
 }
