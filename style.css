@@ -531,7 +531,7 @@ button:hover {
 }
 
 .team-banner {
-  background-image: url(../img/team/teamwork.svg);
+  background-image: url(./img/team/teamwork.svg);
   height: 60vh;
   background-attachment: fixed;
   background-position: center;
