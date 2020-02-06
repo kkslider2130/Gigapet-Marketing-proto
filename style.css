@@ -234,6 +234,11 @@ nav ul.nav-links.open {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width:500px) {
+  .divider-img {
+    background-attachment: scroll;
+  }
+}
 
 .divider-img2 {
   background-image: url(./img/background2.jpg);
@@ -242,6 +247,11 @@ nav ul.nav-links.open {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (max-width:500px) {
+  .divider-img2 {
+    background-attachment: scroll;
+  }
 }
 
 .instruction {
